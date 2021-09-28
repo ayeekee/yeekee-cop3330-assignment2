@@ -90,14 +90,38 @@ public class App {
 
         System.out.println("Results: ");
 
-        /*if(sortFN.contains(search)){
-            System.out.println(sortFN.get(search));
-        }*/
-
         System.out.println("Name                | Position            | Separation Date");
         System.out.println("--------------------|---------------------|------------------");
 
+        for (String element : sortFN){
+            if (element.contains(search)){
+                System.out.print(element);
+                System.out.print(" ");
+            }
+        }
 
+        for (String element : sortLN){
+            if (element.contains(search)){
+                System.out.print(element);
+                System.out.print(" ");
+            }
+        }
+
+        for (String element : sortPS){
+            if (element.contains(search)){
+                System.out.print(element);
+                System.out.print(" ");
+            }
+        }
+
+        for (String element : sortDT){
+            if (element.contains(search)){
+                System.out.print(element);
+                System.out.print(" ");
+            }
+        }
+
+        System.out.println("\n");
 
     }
 }

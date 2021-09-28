@@ -64,9 +64,6 @@ public class App {
 
     public static void main( String[] args ) {
         ArrayList mapList = new ArrayList();
-
-        Scanner se = new Scanner(System.in);
-
         HashMap<String, String> fNameMap = new HashMap<>();
         HashMap<String, String> lNameMap = new HashMap<>();
         HashMap<String, String> positionMap = new HashMap<>();
@@ -82,19 +79,28 @@ public class App {
         mapList.add(positionMap);
         mapList.add(dateMap);
 
-
-
-        System.out.println("Name                | Position            | Separation Date");
-        System.out.println("--------------------|---------------------|------------------");
-
         ArrayList<String> sortFN = new ArrayList<String>(fNameMap.values());
         ArrayList<String> sortLN = new ArrayList<String>(lNameMap.values());
         ArrayList<String> sortPS = new ArrayList<String>(positionMap.values());
         ArrayList<String> sortDT = new ArrayList<String>(dateMap.values());
 
+        Scanner se = new Scanner(System.in);
+        System.out.println("Enter a search string: ");
+        String search = se.nextLine();
 
+        System.out.println("Results: ");
+
+        /*if(sortFN.contains(search)){
+            System.out.println(sortFN.get(search));
+        }*/
+
+        System.out.println("Name                | Position            | Separation Date");
+        System.out.println("--------------------|---------------------|------------------");
 
 
 
     }
 }
+
+
+
